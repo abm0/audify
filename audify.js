@@ -65,7 +65,7 @@
 	}
 
 	Audify.prototype._buildImageUrl = function(image_type) {
-		return this.options.url_prefix + this.options.base64.prefix + this.options.base64[image_type] + this.options.url_postfix;
+		return 'url(' + this.options.base64.prefix + this.options.base64[image_type] + ')';
 	}
 
 	$.fn.audify = function(options) {
@@ -84,8 +84,6 @@
 				}
 			}
 		},
-		url_prefix: 'url(',
-		url_postfix: ')',
 		base64: {
 			prefix: 'data:image/png;base64,',
 			play:   'iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAABLklEQVQokaWTsarCMBiFvzbdtII4CC6KIC4OgqUIglMHXfqMLkUQn8DdNxCHIjgUWzq46Zbf3ElRWrzl3kDIGfL95xxILGOM4Y/Lforb7cZ6vSZJEkSkEuw8hYhwPp/JsozxeIzneTQajWrOzwH3+539fk8URRyPRx6Px++wMQYRee08z9lut2w2Gy6Xy/fYAFrrwoXD4UCSJHieh+/71Gq1ImyMKYUBrtcru92OOI4JgoBer4dS6rOz1hoReZ3vWmvN6XRitVqRpml1ZwDLsuh2uyyXSzqdTrXOAM1mk+l0ynw+x3XdYucy2LZtRqMRi8WCfr9fGPoR+/1ltdttwjBkMpmglCpN9OEsItTrdWazGUEQ0Gq1SqECrJRiOBwShiGDwQDHcb5xAFj/+VU/6MWXZyGFmPkAAAAASUVORK5CYII=',
